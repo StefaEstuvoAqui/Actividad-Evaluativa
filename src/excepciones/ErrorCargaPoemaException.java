@@ -1,8 +1,7 @@
 package excepciones;
 
 /**
- * Excepción encadenada: envuelve la excepción del sistema (IOException o
- * FileNotFoundException) que ocurre al leer el archivo del poema.
+ * Excepción envuelve la excepción del sistema
  */
 public class ErrorCargaPoemaException extends Exception {
 
@@ -10,7 +9,7 @@ public class ErrorCargaPoemaException extends Exception {
         super(mensaje);
     }
 
-    // Constructor que recibe la excepción original como causa
+    // Constructor que recibe la excepción original
     public ErrorCargaPoemaException(String mensaje, Throwable causa) {
         super(mensaje, causa);
     }

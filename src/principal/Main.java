@@ -20,7 +20,7 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         Poema poema = new Poema();
 
-        // Carga inicial del poema (usa la excepción encadenada ErrorCargaPoemaException)
+        // Carga del poema
         try {
             poema.cargarPoema("poema.txt");
             System.out.println("Poema cargado correctamente. Total de palabras: " + poema.getCantidadPalabras());
@@ -61,7 +61,6 @@ public class Main {
                     break;
 
                 case 2:
-                    // A. Excepción nativa: FileNotFoundException
                     System.out.print("Escriba el nombre del archivo a abrir: ");
                     String nombre = teclado.nextLine();
                     try {
@@ -78,7 +77,6 @@ public class Main {
                     break;
 
                 case 3:
-                    // A. Excepciones nativas: ArrayIndexOutOfBoundsException e InputMismatchException
                     System.out.print("Escriba la posición (0 a " + (poema.getCantidadPalabras() - 1) + "): ");
                     try {
                         int posicion = teclado.nextInt();
@@ -95,7 +93,6 @@ public class Main {
                     break;
 
                 case 4:
-                    // B. Excepción personalizada: PalabraNoEncontradaException
                     System.out.print("Escriba la palabra a buscar: ");
                     String buscada = teclado.nextLine();
                     try {
@@ -109,7 +106,6 @@ public class Main {
                     break;
 
                 case 5:
-                    // B. Excepción personalizada: PalabraMuyCortaException
                     System.out.print("Escriba la posición: ");
                     try {
                         int posicion = teclado.nextInt();
@@ -129,7 +125,6 @@ public class Main {
                     break;
 
                 case 6:
-                    // C. Excepción encadenada: ErrorCargaPoemaException
                     System.out.print("Escriba el nombre del archivo a cargar: ");
                     String archivo = teclado.nextLine();
                     try {
@@ -145,7 +140,6 @@ public class Main {
                     break;
 
                 case 7:
-                    // C. Excepción encadenada: PosicionPoemaInvalidaException
                     try {
                         System.out.print("Escriba la posición a modificar: ");
                         int posicion = teclado.nextInt();

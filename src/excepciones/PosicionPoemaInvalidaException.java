@@ -1,7 +1,7 @@
 package excepciones;
 
 /**
- * Excepción encadenada: envuelve la ArrayIndexOutOfBoundsException que ocurre
+ * Excepción envuelve la ArrayIndexOutOfBoundsException que ocurre
  * al intentar acceder o modificar una posición inválida del vector.
  */
 public class PosicionPoemaInvalidaException extends Exception {
@@ -10,7 +10,7 @@ public class PosicionPoemaInvalidaException extends Exception {
         super(mensaje);
     }
 
-    // Constructor que recibe la excepción original como causa
+    // Constructor que recibe la excepción original
     public PosicionPoemaInvalidaException(String mensaje, Throwable causa) {
         super(mensaje, causa);
     }

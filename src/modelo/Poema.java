@@ -34,7 +34,7 @@ public class Poema {
         }
         lector.close();
 
-        // 2. Limpiar los signos de puntuación (comas y puntos)
+        // 2. Limpiar los signos de puntuación
         texto = texto.replace(",", "");
         texto = texto.replace(".", "");
         texto = texto.trim();
@@ -77,7 +77,6 @@ public class Poema {
 
     /**
      * Devuelve la palabra de una posición
-     * Si la posición no existe, Java lanza ArrayIndexOutOfBoundsException
      */
     public String obtenerPalabra(int posicion) {
         return palabras[posicion];
@@ -117,7 +116,6 @@ public class Poema {
 
     /**
      * Cambia la palabra de una posición por una nueva.
-     * Captura ArrayIndexOutOfBoundsException y lanza PosicionPoemaInvalidaException
      */
     public void modificarPalabra(int posicion, String nuevaPalabra) throws PosicionPoemaInvalidaException {
         try {
