@@ -22,10 +22,10 @@ public class Poema {
 
     /**
      * Lee el archivo y llena el vector de palabras.
-     * Este método NO captura las excepciones: las deja pasar
+     * Este mé NO captura las excepciones: las deja pasar
      */
     public void leerArchivo(String nombreArchivo) throws FileNotFoundException, IOException {
-        // 1. Leer todo el texto del archivo línea por línea
+        // 1. Leer el texto del archivo línea por línea
         BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo, StandardCharsets.UTF_8));
         String texto = "";
         String linea;
